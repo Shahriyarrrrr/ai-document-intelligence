@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+storage/
+backend/storage/
+# The dataset is generated (one command, deterministic seed), so the binaries
+# stay out of git. The evaluation RESULTS are committed deliberately - they are
+# a deliverable, and a report nobody can see is not evidence of anything.
+backend/eval/dataset/
+backend/eval/results/_bulk_*.pdf
+.pytest_cache/
+node_modules/
+.next/
+out/
+*.log
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts

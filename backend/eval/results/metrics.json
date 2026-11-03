@@ -1,0 +1,2855 @@
+{
+  "summary": {
+    "documents": {
+      "total": 38,
+      "processed": 38,
+      "failed": 0,
+      "success_rate": 1.0,
+      "scored": 35
+    },
+    "overall": {
+      "field_accuracy": 0.9679,
+      "fields_compared": 280,
+      "fields_correct": 271,
+      "documents_fully_correct": 32,
+      "document_exact_match_rate": 0.9143,
+      "line_item_count_accuracy": 0.9143
+    },
+    "per_field": {
+      "invoice_number": {
+        "n": 35,
+        "correct": 35,
+        "accuracy": 1.0,
+        "extraction_rate": 1.0
+      },
+      "invoice_date": {
+        "n": 35,
+        "correct": 35,
+        "accuracy": 1.0,
+        "extraction_rate": 1.0
+      },
+      "supplier_name": {
+        "n": 35,
+        "correct": 34,
+        "accuracy": 0.9714,
+        "extraction_rate": 1.0
+      },
+      "customer_name": {
+        "n": 35,
+        "correct": 33,
+        "accuracy": 0.9429,
+        "extraction_rate": 1.0
+      },
+      "currency": {
+        "n": 35,
+        "correct": 35,
+        "accuracy": 1.0,
+        "extraction_rate": 1.0
+      },
+      "subtotal": {
+        "n": 35,
+        "correct": 33,
+        "accuracy": 0.9429,
+        "extraction_rate": 0.9429
+      },
+      "tax": {
+        "n": 35,
+        "correct": 32,
+        "accuracy": 0.9143,
+        "extraction_rate": 0.9429
+      },
+      "total": {
+        "n": 35,
+        "correct": 34,
+        "accuracy": 0.9714,
+        "extraction_rate": 0.9714
+      }
+    },
+    "by_variant": {
+      "crosscheck": {
+        "documents": 5,
+        "field_accuracy": 1.0,
+        "mean_s": 0.005,
+        "p95_s": 0.003
+      },
+      "digital": {
+        "documents": 14,
+        "field_accuracy": 1.0,
+        "mean_s": 0.002,
+        "p95_s": 0.003
+      },
+      "duplicate": {
+        "documents": 1,
+        "field_accuracy": 1.0,
+        "mean_s": 0.002,
+        "p95_s": null
+      },
+      "image": {
+        "documents": 6,
+        "field_accuracy": 1.0,
+        "mean_s": 1.29,
+        "p95_s": 1.354
+      },
+      "arithmetic": {
+        "documents": 1,
+        "field_accuracy": 1.0,
+        "mean_s": 0.004,
+        "p95_s": null
+      },
+      "scanned": {
+        "documents": 8,
+        "field_accuracy": 0.8594,
+        "mean_s": 2.867,
+        "p95_s": 3.247
+      }
+    },
+    "timing": {
+      "mean_s": 0.878,
+      "median_s": 0.003,
+      "min_s": 0.002,
+      "max_s": 3.295,
+      "total_s": 30.74
+    },
+    "validation": {
+      "flagged_for_review": 3,
+      "seeded_issues_detected": 2,
+      "seeded_issues_total": 2
+    },
+    "failures": [],
+    "corrupt_handling": {
+      "total": 6,
+      "correctly_rejected": 6,
+      "rate": 1.0,
+      "rows": [
+        {
+          "file": "broken.xlsx",
+          "rejected": true,
+          "code": "xlsx_corrupt"
+        },
+        {
+          "file": "empty.csv",
+          "rejected": true,
+          "code": "file_empty"
+        },
+        {
+          "file": "empty.pdf",
+          "rejected": true,
+          "code": "file_empty"
+        },
+        {
+          "file": "mislabeled.pdf",
+          "rejected": true,
+          "code": "image_unreadable"
+        },
+        {
+          "file": "notes.docx",
+          "rejected": true,
+          "code": "unsupported_type"
+        },
+        {
+          "file": "truncated.pdf",
+          "rejected": true,
+          "code": "pdf_corrupt"
+        }
+      ]
+    },
+    "crosscheck": {
+      "pdf_count": 5,
+      "register_rows": 22,
+      "counts": {
+        "match": 5,
+        "mismatch": 0,
+        "only_left": 0,
+        "only_right": 0
+      },
+      "expected_matches": 5,
+      "precision_note": "All PDFs in this set have a corresponding register row, so a correct run yields match == pdf_count with zero mismatches."
+    },
+    "mode": "rule_based",
+    "methods_used": [
+      "rules"
+    ],
+    "generated_at": "2026-11-03T07:49:56.165183+00:00"
+  },
+  "records": [
+    {
+      "file": "crosscheck_INV-2026-00029.pdf",
+      "variant": "crosscheck_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00029",
+          "expected": "INV-2026-00029",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-01-01",
+          "expected": "2026-01-01",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Riverside Medical Group",
+          "expected": "Riverside Medical Group",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Riverside Select Services LLC",
+          "expected": "Riverside Select Services LLC",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "USD",
+          "expected": "USD",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 5695.4,
+          "expected": 5695.4,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 569.54,
+          "expected": 569.54,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 6264.94,
+          "expected": 6264.94,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.008,
+        "extract_s": 0.003,
+        "validate_s": 0.0,
+        "total_s": 0.012
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 3,
+        "extracted": 3,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "crosscheck_INV-2026-00030.pdf",
+      "variant": "crosscheck_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00030",
+          "expected": "INV-2026-00030",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-04-21",
+          "expected": "2026-04-21",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Kestrel Office Solutions",
+          "expected": "Kestrel Office Solutions",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Brightway Community Care",
+          "expected": "Brightway Community Care",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "EUR",
+          "expected": "EUR",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 149.75,
+          "expected": 149.75,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 14.98,
+          "expected": 14.98,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 164.73,
+          "expected": 164.73,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 0.003
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 2,
+        "extracted": 2,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "crosscheck_INV-2026-00031.pdf",
+      "variant": "crosscheck_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00031",
+          "expected": "INV-2026-00031",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-02-19",
+          "expected": "2026-02-19",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Pioneer Freight Co",
+          "expected": "Pioneer Freight Co",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Riverside Select Services LLC",
+          "expected": "Riverside Select Services LLC",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "GBP",
+          "expected": "GBP",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 2301.5,
+          "expected": 2301.5,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 0.0,
+          "expected": 0.0,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 2301.5,
+          "expected": 2301.5,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.001,
+        "validate_s": 0.0,
+        "total_s": 0.003
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 5,
+        "extracted": 5,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "crosscheck_INV-2026-00032.pdf",
+      "variant": "crosscheck_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00032",
+          "expected": "INV-2026-00032",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-06-05",
+          "expected": "2026-06-05",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Vantage Facilities Ltd",
+          "expected": "Vantage Facilities Ltd",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Riverside Select Services LLC",
+          "expected": "Riverside Select Services LLC",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "EUR",
+          "expected": "EUR",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 4158.7,
+          "expected": 4158.7,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 415.87,
+          "expected": 415.87,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 4574.57,
+          "expected": 4574.57,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 0.003
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 3,
+        "extracted": 3,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "crosscheck_INV-2026-00033.pdf",
+      "variant": "crosscheck_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00033",
+          "expected": "INV-2026-00033",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-04-14",
+          "expected": "2026-04-14",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Northwind Traders Ltd",
+          "expected": "Northwind Traders Ltd",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Riverside Select Services LLC",
+          "expected": "Riverside Select Services LLC",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "USD",
+          "expected": "USD",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 970.1,
+          "expected": 970.1,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 194.02,
+          "expected": 194.02,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 1164.12,
+          "expected": 1164.12,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 0.002
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 4,
+        "extracted": 4,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "digital_INV-2026-00001.pdf",
+      "variant": "digital_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00001",
+          "expected": "INV-2026-00001",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-03-25",
+          "expected": "2026-03-25",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Acme Industrial Supply",
+          "expected": "Acme Industrial Supply",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Riverside Select Services LLC",
+          "expected": "Riverside Select Services LLC",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "USD",
+          "expected": "USD",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 2136.65,
+          "expected": 2136.65,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 427.33,
+          "expected": 427.33,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 2563.98,
+          "expected": 2563.98,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 0.002
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 3,
+        "extracted": 3,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "digital_INV-2026-00002.pdf",
+      "variant": "digital_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00002",
+          "expected": "INV-2026-00002",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-08-20",
+          "expected": "2026-08-20",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Summit Paper Works",
+          "expected": "Summit Paper Works",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Cottage Home Care Services",
+          "expected": "Cottage Home Care Services",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "USD",
+          "expected": "USD",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 2695.7,
+          "expected": 2695.7,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 269.57,
+          "expected": 269.57,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 2965.27,
+          "expected": 2965.27,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 0.003
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 3,
+        "extracted": 3,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "digital_INV-2026-00003.pdf",
+      "variant": "digital_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00003",
+          "expected": "INV-2026-00003",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-05-05",
+          "expected": "2026-05-05",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Pioneer Freight Co",
+          "expected": "Pioneer Freight Co",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Oakfield Residential Trust",
+          "expected": "Oakfield Residential Trust",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "USD",
+          "expected": "USD",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 169.0,
+          "expected": 169.0,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 33.8,
+          "expected": 33.8,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 202.8,
+          "expected": 202.8,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 0.002
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 2,
+        "extracted": 2,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "digital_INV-2026-00004.pdf",
+      "variant": "digital_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00004",
+          "expected": "INV-2026-00004",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-07-23",
+          "expected": "2026-07-23",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Harbourline Services",
+          "expected": "Harbourline Services",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Riverside Select Services LLC",
+          "expected": "Riverside Select Services LLC",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "USD",
+          "expected": "USD",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 381.75,
+          "expected": 381.75,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 0.0,
+          "expected": 0.0,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 381.75,
+          "expected": 381.75,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 0.002
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 4,
+        "extracted": 4,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "digital_INV-2026-00005.pdf",
+      "variant": "digital_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00005",
+          "expected": "INV-2026-00005",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-04-18",
+          "expected": "2026-04-18",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Vantage Facilities Ltd",
+          "expected": "Vantage Facilities Ltd",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Cottage Home Care Services",
+          "expected": "Cottage Home Care Services",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "EUR",
+          "expected": "EUR",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 893.55,
+          "expected": 893.55,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 0.0,
+          "expected": 0.0,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 893.55,
+          "expected": 893.55,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 0.003
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 5,
+        "extracted": 5,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "digital_INV-2026-00006.pdf",
+      "variant": "digital_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00006",
+          "expected": "INV-2026-00006",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-06-29",
+          "expected": "2026-06-29",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Summit Paper Works",
+          "expected": "Summit Paper Works",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Cottage Home Care Services",
+          "expected": "Cottage Home Care Services",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "GBP",
+          "expected": "GBP",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 703.3,
+          "expected": 703.3,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 35.17,
+          "expected": 35.17,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 738.47,
+          "expected": 738.47,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 0.002
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 3,
+        "extracted": 3,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "digital_INV-2026-00007.pdf",
+      "variant": "digital_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00007",
+          "expected": "INV-2026-00007",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-07-01",
+          "expected": "2026-07-01",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Summit Paper Works",
+          "expected": "Summit Paper Works",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Oakfield Residential Trust",
+          "expected": "Oakfield Residential Trust",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "USD",
+          "expected": "USD",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 5220.3,
+          "expected": 5220.3,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 261.02,
+          "expected": 261.02,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 5481.32,
+          "expected": 5481.32,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 0.002
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 4,
+        "extracted": 4,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "digital_INV-2026-00008.pdf",
+      "variant": "digital_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00008",
+          "expected": "INV-2026-00008",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-10-02",
+          "expected": "2026-10-02",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Harbourline Services",
+          "expected": "Harbourline Services",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Cottage Home Care Services",
+          "expected": "Cottage Home Care Services",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "GBP",
+          "expected": "GBP",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 871.0,
+          "expected": 871.0,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 87.1,
+          "expected": 87.1,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 958.1,
+          "expected": 958.1,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 0.002
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 2,
+        "extracted": 2,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "digital_INV-2026-00009.pdf",
+      "variant": "digital_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00009",
+          "expected": "INV-2026-00009",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-07-08",
+          "expected": "2026-07-08",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Northwind Traders Ltd",
+          "expected": "Northwind Traders Ltd",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Meridian Health Partners",
+          "expected": "Meridian Health Partners",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "EUR",
+          "expected": "EUR",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 2547.9,
+          "expected": 2547.9,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 127.4,
+          "expected": 127.4,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 2675.3,
+          "expected": 2675.3,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 0.003
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 4,
+        "extracted": 4,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "digital_INV-2026-00010.pdf",
+      "variant": "digital_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00010",
+          "expected": "INV-2026-00010",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-06-29",
+          "expected": "2026-06-29",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Northwind Traders Ltd",
+          "expected": "Northwind Traders Ltd",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Meridian Health Partners",
+          "expected": "Meridian Health Partners",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "GBP",
+          "expected": "GBP",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 1891.4,
+          "expected": 1891.4,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 94.57,
+          "expected": 94.57,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 1985.97,
+          "expected": 1985.97,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 0.002
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 4,
+        "extracted": 4,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "digital_INV-2026-00011.pdf",
+      "variant": "digital_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00011",
+          "expected": "INV-2026-00011",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-09-14",
+          "expected": "2026-09-14",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Northwind Traders Ltd",
+          "expected": "Northwind Traders Ltd",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Oakfield Residential Trust",
+          "expected": "Oakfield Residential Trust",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "USD",
+          "expected": "USD",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 1777.9,
+          "expected": 1777.9,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 88.9,
+          "expected": 88.9,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 1866.8,
+          "expected": 1866.8,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.001,
+        "validate_s": 0.0,
+        "total_s": 0.003
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 5,
+        "extracted": 5,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "digital_INV-2026-00012.pdf",
+      "variant": "digital_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00012",
+          "expected": "INV-2026-00012",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-02-17",
+          "expected": "2026-02-17",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Delta Components Inc",
+          "expected": "Delta Components Inc",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Oakfield Residential Trust",
+          "expected": "Oakfield Residential Trust",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "GBP",
+          "expected": "GBP",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 4096.1,
+          "expected": 4096.1,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 204.81,
+          "expected": 204.81,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 4300.91,
+          "expected": 4300.91,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.001,
+        "validate_s": 0.0,
+        "total_s": 0.003
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 5,
+        "extracted": 5,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "digital_INV-2026-00013.pdf",
+      "variant": "digital_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00013",
+          "expected": "INV-2026-00013",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-09-19",
+          "expected": "2026-09-19",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Delta Components Inc",
+          "expected": "Delta Components Inc",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Oakfield Residential Trust",
+          "expected": "Oakfield Residential Trust",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "EUR",
+          "expected": "EUR",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 4176.0,
+          "expected": 4176.0,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 835.2,
+          "expected": 835.2,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 5011.2,
+          "expected": 5011.2,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 0.002
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 2,
+        "extracted": 2,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "digital_INV-2026-00014.pdf",
+      "variant": "digital_pdf",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00014",
+          "expected": "INV-2026-00014",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-05-26",
+          "expected": "2026-05-26",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Acme Industrial Supply",
+          "expected": "Acme Industrial Supply",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Riverside Select Services LLC",
+          "expected": "Riverside Select Services LLC",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "EUR",
+          "expected": "EUR",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 481.35,
+          "expected": 481.35,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 96.27,
+          "expected": 96.27,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 577.62,
+          "expected": 577.62,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 0.002
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 4,
+        "extracted": 4,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "duplicate_INV-2026-00001.pdf",
+      "variant": "duplicate",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00001",
+          "expected": "INV-2026-00001",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-03-25",
+          "expected": "2026-03-25",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Acme Industrial Supply",
+          "expected": "Acme Industrial Supply",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Riverside Select Services LLC",
+          "expected": "Riverside Select Services LLC",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "USD",
+          "expected": "USD",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 2136.65,
+          "expected": 2136.65,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 427.33,
+          "expected": 427.33,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 2563.98,
+          "expected": 2563.98,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.002,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 0.002
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 3,
+        "extracted": 3,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": true,
+      "issue_codes": [
+        "duplicate_invoice",
+        "low_confidence"
+      ],
+      "expected_issue": "duplicate_invoice",
+      "expected_issue_detected": true
+    },
+    {
+      "file": "image_light_INV-2026-00023.jpg",
+      "variant": "image_jpeg_light",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00023",
+          "expected": "INV-2026-00023",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-05-31",
+          "expected": "2026-05-31",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Harbourline Services",
+          "expected": "Harbourline Services",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Cottage Home Care Services",
+          "expected": "Cottage Home Care Services",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "EUR",
+          "expected": "EUR",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 2412.0,
+          "expected": 2412.0,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 482.4,
+          "expected": 482.4,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 2894.4,
+          "expected": 2894.4,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 1.587,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 1.587
+      },
+      "pages": 1,
+      "ocr_pages": 1,
+      "source_kind": "image",
+      "mean_ocr_confidence": 91.9,
+      "line_items": {
+        "expected": 2,
+        "extracted": 2,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "image_light_INV-2026-00025.tiff",
+      "variant": "image_tiff_light",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00025",
+          "expected": "INV-2026-00025",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-08-28",
+          "expected": "2026-08-28",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Belmont Logistics GmbH",
+          "expected": "Belmont Logistics GmbH",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Lakeshore Support Network",
+          "expected": "Lakeshore Support Network",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "GBP",
+          "expected": "GBP",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 1411.5,
+          "expected": 1411.5,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 282.3,
+          "expected": 282.3,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 1693.8,
+          "expected": 1693.8,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 1.229,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 1.229
+      },
+      "pages": 1,
+      "ocr_pages": 1,
+      "source_kind": "image",
+      "mean_ocr_confidence": 88.4,
+      "line_items": {
+        "expected": 3,
+        "extracted": 3,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "image_light_INV-2026-00027.png",
+      "variant": "image_png_light",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00027",
+          "expected": "INV-2026-00027",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-03-31",
+          "expected": "2026-03-31",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Belmont Logistics GmbH",
+          "expected": "Belmont Logistics GmbH",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Lakeshore Support Network",
+          "expected": "Lakeshore Support Network",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "USD",
+          "expected": "USD",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 2812.3,
+          "expected": 2812.3,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 210.92,
+          "expected": 210.92,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 3023.22,
+          "expected": 3023.22,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 1.204,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 1.205
+      },
+      "pages": 1,
+      "ocr_pages": 1,
+      "source_kind": "image",
+      "mean_ocr_confidence": 85.9,
+      "line_items": {
+        "expected": 5,
+        "extracted": 5,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "image_medium_INV-2026-00024.png",
+      "variant": "image_png_medium",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00024",
+          "expected": "INV-2026-00024",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-03-04",
+          "expected": "2026-03-04",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Acme Industrial Supply",
+          "expected": "Acme Industrial Supply",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Meridian Health Partners",
+          "expected": "Meridian Health Partners",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "USD",
+          "expected": "USD",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 3781.3,
+          "expected": 3781.3,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 0.0,
+          "expected": 0.0,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 3781.3,
+          "expected": 3781.3,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 1.354,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 1.354
+      },
+      "pages": 1,
+      "ocr_pages": 1,
+      "source_kind": "image",
+      "mean_ocr_confidence": 73.5,
+      "line_items": {
+        "expected": 3,
+        "extracted": 3,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "image_medium_INV-2026-00026.jpg",
+      "variant": "image_jpeg_medium",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00026",
+          "expected": "INV-2026-00026",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-08-23",
+          "expected": "2026-08-23",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Summit Paper Works",
+          "expected": "Summit Paper Works",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Riverside Select Services LLC",
+          "expected": "Riverside Select Services LLC",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "USD",
+          "expected": "USD",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 3833.8,
+          "expected": 3833.8,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 383.38,
+          "expected": 383.38,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 4217.18,
+          "expected": 4217.18,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 1.245,
+        "extract_s": 0.001,
+        "validate_s": 0.0,
+        "total_s": 1.246
+      },
+      "pages": 1,
+      "ocr_pages": 1,
+      "source_kind": "image",
+      "mean_ocr_confidence": 77.0,
+      "line_items": {
+        "expected": 4,
+        "extracted": 4,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "image_medium_INV-2026-00028.tiff",
+      "variant": "image_tiff_medium",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00028",
+          "expected": "INV-2026-00028",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-08-04",
+          "expected": "2026-08-04",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "; Pioneer Freight Co",
+          "expected": "Pioneer Freight Co",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Riverside Select Services LLC",
+          "expected": "Riverside Select Services LLC",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "USD",
+          "expected": "USD",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 272.85,
+          "expected": 272.85,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 13.64,
+          "expected": 13.64,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 286.49,
+          "expected": 286.49,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 1.119,
+        "extract_s": 0.001,
+        "validate_s": 0.0,
+        "total_s": 1.12
+      },
+      "pages": 1,
+      "ocr_pages": 1,
+      "source_kind": "image",
+      "mean_ocr_confidence": 75.8,
+      "line_items": {
+        "expected": 3,
+        "extracted": 3,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "inconsistent_INV-2026-99001.pdf",
+      "variant": "arithmetic_mismatch",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-99001",
+          "expected": "INV-2026-99001",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-04-04",
+          "expected": "2026-04-04",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Pioneer Freight Co",
+          "expected": "Pioneer Freight Co",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Cottage Home Care Services",
+          "expected": "Cottage Home Care Services",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "USD",
+          "expected": "USD",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 491.75,
+          "expected": 491.75,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 24.59,
+          "expected": 24.59,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 541.34,
+          "expected": 541.34,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 0.003,
+        "extract_s": 0.001,
+        "validate_s": 0.0,
+        "total_s": 0.004
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "pdf_digital",
+      "mean_ocr_confidence": null,
+      "line_items": {
+        "expected": 2,
+        "extracted": 2,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": true,
+      "issue_codes": [
+        "low_confidence",
+        "total_mismatch"
+      ],
+      "expected_issue": "total_mismatch",
+      "expected_issue_detected": true
+    },
+    {
+      "file": "register.csv",
+      "variant": "csv",
+      "ok": true,
+      "fields": {},
+      "timings": {
+        "ingest_s": 0.031
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "csv",
+      "mean_ocr_confidence": null,
+      "skipped_scoring": "multi_invoice_register"
+    },
+    {
+      "file": "register_multi_sheet.xlsx",
+      "variant": "xlsx_multi_sheet",
+      "ok": true,
+      "fields": {},
+      "timings": {
+        "ingest_s": 0.018
+      },
+      "pages": 3,
+      "ocr_pages": 0,
+      "source_kind": "spreadsheet",
+      "mean_ocr_confidence": null,
+      "skipped_scoring": "multi_invoice_register"
+    },
+    {
+      "file": "register_semicolon_latin1.csv",
+      "variant": "csv_semicolon_latin1",
+      "ok": true,
+      "fields": {},
+      "timings": {
+        "ingest_s": 0.007
+      },
+      "pages": 1,
+      "ocr_pages": 0,
+      "source_kind": "csv",
+      "mean_ocr_confidence": null,
+      "skipped_scoring": "multi_invoice_register"
+    },
+    {
+      "file": "scanned_heavy_INV-2026-00017.pdf",
+      "variant": "scanned_pdf_heavy",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00017",
+          "expected": "INV-2026-00017",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-03-25",
+          "expected": "2026-03-25",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "~~ Acme Industrial Supply |",
+          "expected": "Acme Industrial Supply",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "! Oaktield Residential Trust",
+          "expected": "Oakfield Residential Trust",
+          "correct": false,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "EUR",
+          "expected": "EUR",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": null,
+          "expected": 4853.4,
+          "correct": false,
+          "extracted": false
+        },
+        "tax": {
+          "predicted": null,
+          "expected": 0.0,
+          "correct": false,
+          "extracted": false
+        },
+        "total": {
+          "predicted": 4853.4,
+          "expected": 4853.4,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 2.665,
+        "extract_s": 0.003,
+        "validate_s": 0.0,
+        "total_s": 2.668
+      },
+      "pages": 1,
+      "ocr_pages": 1,
+      "source_kind": "pdf_scanned",
+      "mean_ocr_confidence": 48.8,
+      "line_items": {
+        "expected": 4,
+        "extracted": 0,
+        "count_correct": false
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence",
+        "missing_recommended_field"
+      ]
+    },
+    {
+      "file": "scanned_heavy_INV-2026-00020.pdf",
+      "variant": "scanned_pdf_heavy",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00020",
+          "expected": "INV-2026-00020",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-07-16",
+          "expected": "2026-07-16",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Belmont Logistics GmbH 7 |",
+          "expected": "Belmont Logistics GmbH",
+          "correct": false,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Oakfield Residential Trust Do",
+          "expected": "Oakfield Residential Trust",
+          "correct": false,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "USD",
+          "expected": "USD",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 2179.8,
+          "expected": 2179.8,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": null,
+          "expected": 435.96,
+          "correct": false,
+          "extracted": false
+        },
+        "total": {
+          "predicted": null,
+          "expected": 2615.76,
+          "correct": false,
+          "extracted": false
+        }
+      },
+      "timings": {
+        "ingest_s": 3.074,
+        "extract_s": 0.001,
+        "validate_s": 0.0,
+        "total_s": 3.075
+      },
+      "pages": 1,
+      "ocr_pages": 1,
+      "source_kind": "pdf_scanned",
+      "mean_ocr_confidence": 49.1,
+      "line_items": {
+        "expected": 5,
+        "extracted": 2,
+        "count_correct": false
+      },
+      "method": "rules",
+      "needs_review": true,
+      "issue_codes": [
+        "line_items_sum_mismatch",
+        "low_confidence",
+        "missing_recommended_field",
+        "missing_required_field"
+      ]
+    },
+    {
+      "file": "scanned_light_INV-2026-00015.pdf",
+      "variant": "scanned_pdf_light",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00015",
+          "expected": "INV-2026-00015",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-06-07",
+          "expected": "2026-06-07",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Belmont Logistics GmbH",
+          "expected": "Belmont Logistics GmbH",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Lakeshore Support Network",
+          "expected": "Lakeshore Support Network",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "USD",
+          "expected": "USD",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 1626.0,
+          "expected": 1626.0,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 0.0,
+          "expected": 0.0,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 1626.0,
+          "expected": 1626.0,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 2.373,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 2.374
+      },
+      "pages": 1,
+      "ocr_pages": 1,
+      "source_kind": "pdf_scanned",
+      "mean_ocr_confidence": 92.1,
+      "line_items": {
+        "expected": 3,
+        "extracted": 3,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "scanned_light_INV-2026-00018.pdf",
+      "variant": "scanned_pdf_light",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00018",
+          "expected": "INV-2026-00018",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-04-09",
+          "expected": "2026-04-09",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Pioneer Freight Co",
+          "expected": "Pioneer Freight Co",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Meridian Health Partners",
+          "expected": "Meridian Health Partners",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "EUR",
+          "expected": "EUR",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 5449.1,
+          "expected": 5449.1,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 408.68,
+          "expected": 408.68,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 5857.78,
+          "expected": 5857.78,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 2.621,
+        "extract_s": 0.001,
+        "validate_s": 0.0,
+        "total_s": 2.622
+      },
+      "pages": 1,
+      "ocr_pages": 1,
+      "source_kind": "pdf_scanned",
+      "mean_ocr_confidence": 92.0,
+      "line_items": {
+        "expected": 3,
+        "extracted": 3,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "scanned_light_INV-2026-00021.pdf",
+      "variant": "scanned_pdf_light",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00021",
+          "expected": "INV-2026-00021",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-01-01",
+          "expected": "2026-01-01",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Harbourline Services",
+          "expected": "Harbourline Services",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Lakeshore Support Network",
+          "expected": "Lakeshore Support Network",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "USD",
+          "expected": "USD",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 567.9,
+          "expected": 567.9,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 42.59,
+          "expected": 42.59,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 610.49,
+          "expected": 610.49,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 2.567,
+        "extract_s": 0.0,
+        "validate_s": 0.0,
+        "total_s": 2.568
+      },
+      "pages": 1,
+      "ocr_pages": 1,
+      "source_kind": "pdf_scanned",
+      "mean_ocr_confidence": 94.7,
+      "line_items": {
+        "expected": 5,
+        "extracted": 5,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "scanned_medium_INV-2026-00016.pdf",
+      "variant": "scanned_pdf_medium",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00016",
+          "expected": "INV-2026-00016",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-01-10",
+          "expected": "2026-01-10",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Harbourline Services",
+          "expected": "Harbourline Services",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Cottage Home Care Services",
+          "expected": "Cottage Home Care Services",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "GBP",
+          "expected": "GBP",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 6316.85,
+          "expected": 6316.85,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 473.76,
+          "expected": 473.76,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 6790.61,
+          "expected": 6790.61,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 3.295,
+        "extract_s": 0.001,
+        "validate_s": 0.0,
+        "total_s": 3.295
+      },
+      "pages": 1,
+      "ocr_pages": 1,
+      "source_kind": "pdf_scanned",
+      "mean_ocr_confidence": 74.2,
+      "line_items": {
+        "expected": 5,
+        "extracted": 5,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "scanned_medium_INV-2026-00019.pdf",
+      "variant": "scanned_pdf_medium",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00019",
+          "expected": "INV-2026-00019",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-10-20",
+          "expected": "2026-10-20",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "Northwind Traders Ltd",
+          "expected": "Northwind Traders Ltd",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Oakfield Residential Trust",
+          "expected": "Oakfield Residential Trust",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "GBP",
+          "expected": "GBP",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": 2364.2,
+          "expected": 2364.2,
+          "correct": true,
+          "extracted": true
+        },
+        "tax": {
+          "predicted": 472.84,
+          "expected": 472.84,
+          "correct": true,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 2837.04,
+          "expected": 2837.04,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 3.088,
+        "extract_s": 0.001,
+        "validate_s": 0.0,
+        "total_s": 3.089
+      },
+      "pages": 1,
+      "ocr_pages": 1,
+      "source_kind": "pdf_scanned",
+      "mean_ocr_confidence": 74.7,
+      "line_items": {
+        "expected": 4,
+        "extracted": 4,
+        "count_correct": true
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence"
+      ]
+    },
+    {
+      "file": "scanned_medium_INV-2026-00022.pdf",
+      "variant": "scanned_pdf_medium",
+      "ok": true,
+      "fields": {
+        "invoice_number": {
+          "predicted": "INV-2026-00022",
+          "expected": "INV-2026-00022",
+          "correct": true,
+          "extracted": true
+        },
+        "invoice_date": {
+          "predicted": "2026-08-28",
+          "expected": "2026-08-28",
+          "correct": true,
+          "extracted": true
+        },
+        "supplier_name": {
+          "predicted": "_ Acme Industrial Supply",
+          "expected": "Acme Industrial Supply",
+          "correct": true,
+          "extracted": true
+        },
+        "customer_name": {
+          "predicted": "Lakeshore Support Network",
+          "expected": "Lakeshore Support Network",
+          "correct": true,
+          "extracted": true
+        },
+        "currency": {
+          "predicted": "USD",
+          "expected": "USD",
+          "correct": true,
+          "extracted": true
+        },
+        "subtotal": {
+          "predicted": null,
+          "expected": 2490.35,
+          "correct": false,
+          "extracted": false
+        },
+        "tax": {
+          "predicted": 2490.35,
+          "expected": 498.07,
+          "correct": false,
+          "extracted": true
+        },
+        "total": {
+          "predicted": 2988.42,
+          "expected": 2988.42,
+          "correct": true,
+          "extracted": true
+        }
+      },
+      "timings": {
+        "ingest_s": 3.247,
+        "extract_s": 0.001,
+        "validate_s": 0.0,
+        "total_s": 3.247
+      },
+      "pages": 1,
+      "ocr_pages": 1,
+      "source_kind": "pdf_scanned",
+      "mean_ocr_confidence": 67.2,
+      "line_items": {
+        "expected": 5,
+        "extracted": 2,
+        "count_correct": false
+      },
+      "method": "rules",
+      "needs_review": false,
+      "issue_codes": [
+        "low_confidence",
+        "missing_recommended_field"
+      ]
+    }
+  ],
+  "comparison": null
+}
